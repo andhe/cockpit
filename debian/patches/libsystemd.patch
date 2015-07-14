@@ -1,0 +1,17 @@
+From: Andreas Henriksson <andreas@fatal.se>
+Subject: use libsystemd instead of deprecated alternatives
+
+The libsystemd-* libraries has been merged into one and the same
+libsystemd library. The old names are deprecated. Avoid using them.
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -59,7 +59,7 @@
+ LIBSSH_VERSION="0.6.0"
+ 
+ GIO_REQUIREMENT="gio-unix-2.0 >= $GLIB_VERSION"
+-SYSTEMD_REQUIREMENT="libsystemd-journal >= 187 libsystemd-daemon"
++SYSTEMD_REQUIREMENT="libsystemd"
+ JSON_GLIB_REQUIREMENT="json-glib-1.0 >= 0.14.0"
+ POLKIT_REQUIREMENT="polkit-agent-1 >= 0.105"
+ 

@@ -1,0 +1,18 @@
+From: Andreas Henriksson <andreas@fatal.se>
+Subject: Use LDFLAGS when building pam_reauthorize.so
+
+Otherwise linker flags will not get used. Eg. if passing hardening flags
+to get read-only relocations (relro) via LDFLAGS, the pam_reauthorize.so
+binary was built without them.
+
+--- a/src/reauthorize/Makefile-reauthorize.am
++++ b/src/reauthorize/Makefile-reauthorize.am
+@@ -11,7 +11,7 @@
+ 
+ pam_reauthorize_FILES = src/reauthorize/pam_reauthorize.c src/reauthorize/reauthorize.c
+ pam_reauthorize.so: $(pam_reauthorize_FILES)
+-	$(AM_V_CCLD) $(CC) -fPIC -shared $(CFLAGS) -I$(builddir) -o $@ $^ $(REAUTHORIZE_LIBS)
++	$(AM_V_CCLD) $(CC) -fPIC -shared $(CFLAGS) -I$(builddir) -o $@ $^ $(REAUTHORIZE_LIBS) $(LDFLAGS)
+ 
+ pam_MODULES = pam_reauthorize.so
+ 
