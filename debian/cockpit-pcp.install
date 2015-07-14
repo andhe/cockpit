@@ -1,0 +1,2 @@
+usr/lib/*/cockpit-pcp
+var/lib/pcp/config/pmlogconf/tools/cockpit

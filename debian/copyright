@@ -1,0 +1,117 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: cockpit
+Upstream-Contact: cockpit-devel@lists.fedorahosted.org
+Source: http://github.com/cockpit-project/cockpit
+License: LGPL-2+
+
+Files: src/*
+Copyright: 2008-2015 Red Hat, Inc.
+           2003-2011 Aris Adamantiadis
+           2011 Nokia Corporation
+           2014 Richard Hughes <richard@hughsie.com>
+           1995,2004 Silicon Graphics, Inc.
+           2007-2011 David Zeuthen <zeuthen@gmail.com>
+           2013 Marius Vollmer <marius.vollmer@gmail.com>
+           2014 Karel Zak <kzak@redhat.com>
+           2014 Sami Kerola <kerolasa@iki.fi>
+           1988, 1993, 1994 The Regents of the University of California.
+License: LGPL-2.1+
+
+Files: src/common/cockpitunixsignal.c
+Copyright: 2014 Red Hat, Inc.
+License: 4-clause-BSD
+
+Files: src/reauthorize/*-reauthorize.c
+       src/reauthorize/retest.*
+Copyright: 2013-2014 Red Hat Inc.
+License: 2-clause-BSD
+
+Files: src/legacy/*
+Copyright: 2007-2011 David Zeuthen <zeuthen@gmail.com>
+License: GPL-2+
+
+Files: src/bridge/mock-pmda.c
+Copyright: 2014 Red Hat.
+           1995,2004 Silicon Graphics, Inc.  All Rights Reserved.
+License: GPL-2+
+
+Files: examples/poc-vnc/include/*
+Copyright: 2011 Joel Martin <github@martintribe.org>
+           2013 Samuel Mannehed for Cendio AB
+           2013 NTT corp.
+           2011 by Erik Moller
+           2003 by Joergen Ibsen / Jibz
+License: MPL-2.0
+
+Files: examples/poc-vnc/include/des.js
+Copyright:
+           1996 by Jef Poskanzer <jef@acme.com>.  All rights reserved.
+           1996 Widget Workshop, Inc. All Rights Reserved.
+           1999 AT&T Laboratories Cambridge.  All Rights Reserved.
+License: 2-clause-BSD
+
+Files: examples/poc-vnc/*.html
+       examples/poc-vnc/include/*.css
+Copyright: 2012 Joel Martin
+           2013 Samuel Mannehed for Cendio AB
+License: 2-clause-BSD
+
+Files: examples/poc-vnc/include/Orbitron*
+Copyright: 2009 Matt McInerney
+License: SIL-Open-Font-License-1.1
+
+Files: ./pkg/base1/jquery.*js
+Copyright: 2011-2015 Twitter, Inc.
+           2012 Daniel Farrell
+           2012 Stefan Petre
+           2013 bootstrap-select
+           2013 jQuery Foundation, Inc. and other contributors
+           2007-2014 IOLA and Ole Laursen.
+           2013 Selvakumar Arumugam
+License: MIT
+
+Files: ./pkg/base1/patternfly.*
+Copyright: 2012 Stefan Petre
+           2013 bootstrap-select
+License: MIT
+
+Files: ./pkg/base1/require.*
+Copyright: 2010-2015, The Dojo Foundation All Rights Reserved.
+License: MIT
+
+Files: ./pkg/base1/term.*
+Copyright: 2011 Fabrice Bellard
+           2012-2013, Christopher Jeffrey (MIT License)
+License: MIT
+
+Files: test-avocade/*
+Copyright: 2015 Red Hat, Inc.
+License: LGPL-2.1+
+
+Files: test-avocado/sizzle.*
+Copyright: 2008, 2014 jQuery Foundation, Inc. and other contributors
+License: MIT
+
+Files: test/*
+Copyright: 2013-2015 Red Hat, Inc.
+License: LGPL-2.1+
+
+Files: test/sizzle.js
+Copyright: 2008, 2014 jQuery Foundation, Inc. and other contributors
+License: MIT
+
+Files: tools/*
+Copyright: 2013-2014 Red Hat, Inc.
+License: LGPL-2.1+
+
+Files: tools/qunit.*
+Copyright: 2013 jQuery Foundation and other contributors
+           2005, 2014 jQuery Foundation, Inc. and other contributors
+           2008 Ariel Flesler - aflesler(at)gmail(dot)com
+           2010-2014 Takuto Wada
+           2014 Red Hat, Inc.
+License: MIT
+
+Files: debian/*
+Copyright: 2015 Andreas Henriksson <andreas@fatal.se>
+License: LGPL-2.1+

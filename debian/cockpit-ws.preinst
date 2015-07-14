@@ -1,0 +1,12 @@
+#! /bin/sh
+
+# add cockpit-ws user/group if needed.
+if ! getent group cockpit-ws >/dev/null; then
+        addgroup --system cockpit-ws
+fi
+if ! getent passwd cockpit-ws >/dev/null; then
+        adduser --system --ingroup cockpit-ws \
+                cockpit-ws
+fi
+
+#DEBHELPER#

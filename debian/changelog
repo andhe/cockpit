@@ -1,0 +1,5 @@
+cockpit (0.64-1) UNRELEASED; urgency=low
+
+  * Initial package version
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 14 Jul 2015 13:42:32 +0200

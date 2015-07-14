@@ -1,0 +1,13 @@
+#!/usr/bin/dh-exec
+etc/dbus-1/system.d/com.redhat.Cockpit.LVM.conf
+usr/bin/cockpit-bridge
+usr/share/man/man1/cockpit-bridge.1
+usr/lib/*/cockpit-lvm
+usr/lib/*/cockpit-lvm-helper
+usr/lib/*/cockpit-polkit
+usr/lib/*/cockpit-wrapper
+usr/lib/${DEB_HOST_MULTIARCH}/security/pam_reauthorize.so => /lib/security/pam_reauthorize.so
+usr/share/cockpit/lvm-nolocking/lvm.conf
+usr/share/dbus-1/services/com.redhat.Cockpit.service
+usr/share/dbus-1/system-services/com.redhat.Cockpit.LVM.service
+usr/share/polkit-1/actions/com.redhat.Cockpit.LVM.policy

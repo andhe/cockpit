@@ -1,0 +1,38 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+CONFOPTS=--disable-static --disable-silent-rules \
+	--with-cockpit-user=cockpit-ws --with-branding=auto
+
+%:
+	dh $@ --with autoreconf,systemd
+
+get-orig-source:
+	uscan --force-download
+
+override_dh_autoreconf:
+	NOCONFIGURE=1 dh_autoreconf -- ./autogen.sh
+	# use nodejs instead of node.
+	find -L ./tools -type f | xargs sed -i '1!b;s/env node$$/env nodejs/'
+	# fix uglifyjs
+	sed -i 's#^var UglifyJS = require.*#var UglifyJS = require("../tools/node_modules/uglify-js");#' tools/uglifyjs
+	npm install yargs
+	# jshint
+	sed -i 's#../src#../jshint/src#' tools/node_modules/.bin/jshint
+	# html-minifier
+	npm install cli
+	npm install concat-stream
+	npm install change-case
+	(cd tools/node_modules/.bin && ln -s ../html-minifier/package.json)
+	(cd tools/node_modules/.bin && ln -s ../html-minifier/dist)
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(CONFOPTS)
+
+override_dh_auto_test:
+	# skip testsuite for now!
+
+override_dh_install:
+	dh_install --list-missing

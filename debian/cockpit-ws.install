@@ -1,0 +1,15 @@
+#!/usr/bin/dh-exec
+test/cockpit.pam => /etc/pam.d/cockpit
+etc/cockpit
+usr/share/man/man5/cockpit.conf.5
+lib/systemd/system/cockpit.service
+lib/systemd/system/cockpit.socket
+usr/lib/*/cockpit-session
+usr/lib/*/cockpit-ws
+usr/share/man/man8/cockpit-ws.8
+usr/lib/firewalld/services/cockpit.xml
+usr/sbin/remotectl
+usr/share/man/man8/remotectl.8
+usr/share/cockpit/branding
+usr/share/cockpit/static
+var/lib/cockpit
